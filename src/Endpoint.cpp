@@ -62,23 +62,27 @@ namespace frs
             if (ss.fail())
             {
                 return false;
-           }
+            }
 
             if (octet > MaxOctetSize)
             {
                 return false;
             }
 
-            ss >> dot;
-
-            if (ss.fail())
+            // if octet was not last
+            if (i < 3)
             {
-                return false;
-            }
+                ss >> dot;
 
-            if (dot != '.')
-            {
-                return false;
+                if (ss.fail())
+                {
+                    return false;
+                }
+            
+                if (dot != '.')
+                {
+                    return false;
+                }
             }
         }
 
