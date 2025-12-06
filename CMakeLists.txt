@@ -8,9 +8,10 @@ set(SRC
     src/main.cpp
     src/Endpoint.cpp
     src/BindParameter.cpp
-    src/BufferSizeParameter.cpp)
+    src/BufferSizeParameter.cpp
+    src/ParameterParser.cpp)
 
-add_executable(frs src/main.cpp)
+add_executable(frs ${SRC})
 
 target_include_directories(frs 
     PRIVATE

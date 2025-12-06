@@ -9,7 +9,7 @@ namespace frs
         MaxOctetSize(255),
         _port(port)
     {
-        if (!CheckIpStringIsCorrect)
+        if (!CheckIpStringIsCorrect(ip))
         {
             throw std::invalid_argument("ip string is invalid");
         }
