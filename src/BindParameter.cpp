@@ -13,7 +13,7 @@ namespace frs
         _parameterText = parameterText;
     }
 
-    Endpoint& BindParameter::GetArgument()
+    Endpoint BindParameter::GetArgument()
     {
         return _argument;
     }

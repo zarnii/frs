@@ -4,7 +4,7 @@
 
 namespace frs
 {
-    class BindParameter: public Parameter<Endpoint>
+    class BindParameter: public Parameter
     {
     private:
         Endpoint _argument;
@@ -13,6 +13,6 @@ namespace frs
     public:
         BindParameter(const Endpoint& endpoint, const std::string parameterText);
 
-        Endpoint& GetArgument() override;
+        Endpoint GetArgument();
     };
 }

@@ -4,13 +4,13 @@
 
 namespace frs
 {
-    class BufferSizeParameter: public Parameter<size_t>
+    class BufferSizeParameter: public Parameter
     {
     private:
         size_t _size;
     public:
         BufferSizeParameter(size_t size);
         
-        size_t& GetArgument() override;
+        size_t GetArgument();
     };
 }
