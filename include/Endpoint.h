@@ -15,7 +15,7 @@ namespace frs
         u_short _port;
 
     public:
-        Endpoint(std::string& ip, ushort port);
+        Endpoint(std::string ip, ushort port);
         
         bool operator==(Endpoint& other);
     private:

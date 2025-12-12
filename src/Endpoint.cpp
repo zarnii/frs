@@ -3,7 +3,7 @@
 
 namespace frs
 {
-    Endpoint::Endpoint(std::string& ip, ushort port)
+    Endpoint::Endpoint(std::string ip, ushort port)
         : MinIpStringLength(7), 
         MaxIpStringLength(15),
         MaxOctetSize(255),
