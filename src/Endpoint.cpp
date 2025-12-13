@@ -22,6 +22,12 @@ namespace frs
         return _ip == other._ip && _port == other._port;
     }
 
+    void Endpoint::operator=(Endpoint& other)
+    {
+        _ip = other._ip;
+        _port = other._port;
+    }
+
     bool Endpoint::CheckIpStringIsCorrect(std::string& ip)
     {
         if (!CheckIpStringLengthIsCorrect(ip))

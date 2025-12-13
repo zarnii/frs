@@ -4,26 +4,18 @@
 
 int main(int argc, char* argv[])
 {
+    /*
     if (argc < 2)
     {
         std::cout << "Program did not accept any arguments" << std::endl;
 
         return 0;
     }
+    */
 
-
+    char** programParam = (static_cast<char**>(argv)) + 2;
     frs::ParameterParser parser;
-    frs::SocketMode mode = parser.ParseSocketMode(argv[1]);
-
-    if (mode == frs::SocketMode::Recv)
-    {
-        
-    }
-
-    if (mode == frs::SocketMode::Send)
-    {
-
-    }
+    frs::SocketRecvConf config = parser.CreateRecvConfByParams(argc - 2, programParam);
 
     return 0;
 }

@@ -8,6 +8,12 @@ namespace frs
     class Endpoint
     {
     private:
+        /*
+        to-do:
+            ~ create public static varible of size_t type describing
+              min/max length of ip string
+              min/max length of port string
+        */
         const u_char MinIpStringLength;
         const u_char MaxIpStringLength;
         const u_char MaxOctetSize;
@@ -18,6 +24,8 @@ namespace frs
         Endpoint(std::string ip, ushort port);
         
         bool operator==(Endpoint& other);
+
+        void operator=(Endpoint& other);
     private:
         bool CheckIpStringIsCorrect(std::string& ip);
 

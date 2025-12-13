@@ -7,9 +7,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(SRC 
     src/main.cpp
     src/Endpoint.cpp
-    src/BindParameter.cpp
-    src/BufferSizeParameter.cpp
-    src/ParameterParser.cpp)
+    src/Parameter.cpp
+    src/ParameterParser.cpp
+    src/SocketRecvConf.cpp
+    src/SocketRecv.cpp)
 
 add_executable(frs ${SRC})
 
