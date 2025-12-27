@@ -17,6 +17,16 @@ namespace frs
         _ip = ip;
     }
 
+    const std::string& Endpoint::GetIp()
+    {
+        return _ip;
+    }
+
+    const u_short Endpoint::GetPort()
+    {
+        return _port;
+    }
+
     bool Endpoint::operator==(Endpoint& other)
     {
         return _ip == other._ip && _port == other._port;

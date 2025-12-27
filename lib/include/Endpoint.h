@@ -26,6 +26,10 @@ namespace frs
         bool operator==(Endpoint& other);
 
         void operator=(Endpoint& other);
+
+        const std::string& GetIp();
+        
+        const u_short GetPort();
     private:
         bool CheckIpStringIsCorrect(std::string& ip);
 
